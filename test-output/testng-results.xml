@@ -1,20 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2020-08-19T19:36:18 GMT-04:00" name="Default suite" finished-at="2020-08-19T19:36:19 GMT-04:00" duration-ms="710">
+  <suite started-at="2020-08-20T15:19:02 GMT-04:00" name="Default suite" finished-at="2020-08-20T15:19:02 GMT-04:00" duration-ms="880">
     <groups>
     </groups>
-    <test started-at="2020-08-19T19:36:18 GMT-04:00" name="Default test" finished-at="2020-08-19T19:36:19 GMT-04:00" duration-ms="710">
+    <test started-at="2020-08-20T15:19:02 GMT-04:00" name="Default test" finished-at="2020-08-20T15:19:02 GMT-04:00" duration-ms="880">
       <class name="APIGetMethodTest.GetApiTest">
-        <test-method is-config="true" signature="setUP()[pri:0, instance:APIGetMethodTest.GetApiTest@29215f06]" started-at="2020-08-19T19:36:18 GMT-04:00" name="setUP" finished-at="2020-08-19T19:36:18 GMT-04:00" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="setUP()[pri:0, instance:APIGetMethodTest.GetApiTest@59505b48]" started-at="2020-08-20T15:19:02 GMT-04:00" name="setUP" finished-at="2020-08-20T15:19:02 GMT-04:00" duration-ms="12" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUP -->
-        <test-method signature="getAPItest()[pri:0, instance:APIGetMethodTest.GetApiTest@29215f06]" started-at="2020-08-19T19:36:18 GMT-04:00" name="getAPItest" finished-at="2020-08-19T19:36:19 GMT-04:00" duration-ms="643" status="PASS">
+        <test-method signature="getAPItest()[pri:0, instance:APIGetMethodTest.GetApiTest@59505b48]" started-at="2020-08-20T15:19:02 GMT-04:00" name="getAPItest" finished-at="2020-08-20T15:19:02 GMT-04:00" duration-ms="630" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAPItest -->
+        <test-method signature="getAPItestWithHeader()[pri:0, instance:APIGetMethodTest.GetApiTest@59505b48]" started-at="2020-08-20T15:19:02 GMT-04:00" name="getAPItestWithHeader" finished-at="2020-08-20T15:19:02 GMT-04:00" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getAPItestWithHeader -->
+        <test-method is-config="true" signature="setUP()[pri:0, instance:APIGetMethodTest.GetApiTest@59505b48]" started-at="2020-08-20T15:19:02 GMT-04:00" name="setUP" finished-at="2020-08-20T15:19:02 GMT-04:00" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUP -->
       </class> <!-- APIGetMethodTest.GetApiTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

@@ -2,6 +2,7 @@ package client;
 
 import java.io.IOException;
 import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.http.Header;
 import org.apache.http.client.ClientProtocolException;
@@ -16,9 +17,7 @@ import BasePage.BasePage;
 
 public class RestClient extends BasePage {
 	
-  
 //GET method
-	
 	
 
 	public RestClient() throws IOException {
@@ -26,27 +25,27 @@ public class RestClient extends BasePage {
 		// TODO Auto-generated constructor stub
 	}
 
-	public void get(String url) throws ClientProtocolException, IOException {
+	public CloseableHttpResponse get (String url) throws ClientProtocolException, IOException {
 		
 		CloseableHttpClient httpClient=HttpClients.createDefault();
 		HttpGet httpget = new HttpGet(url);
 		CloseableHttpResponse response = httpClient.execute(httpget);
-		int statusCode = response.getStatusLine().getStatusCode();
-		System.out.println(statusCode);
 		
-		String responseBody = EntityUtils.toString(response.getEntity(), "UTF-8");
+		return response;
 		
+	}
+	
+public CloseableHttpResponse get (String url, HashMap<String, String> headerMap) throws ClientProtocolException, IOException {
 		
-		JSONObject responseJson = new JSONObject(responseBody);
-		System.out.println("responseBody----"+responseBody);
+		CloseableHttpClient httpClient=HttpClients.createDefault();
+		HttpGet httpget = new HttpGet(url);//http GET request
 		
-		Header headerArray[] = response.getAllHeaders();
-		HashMap<String,String> allHeaders= new HashMap<String,String>();
+		for(Map.Entry<String, String> entry: headerMap.entrySet()) {
+			httpget.addHeader(entry.getKey(),entry.getValue());			
+		}	
 		
-		for(Header header:headerArray) {
-			allHeaders.put(header.getName(), header.getValue());
-		}
-		System.out.println("response JSON from api  ::"+allHeaders);
+		CloseableHttpResponse response = httpClient.execute(httpget);		
+		return response;
 		
 	}
 	
